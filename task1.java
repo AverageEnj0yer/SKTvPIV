@@ -3,17 +3,16 @@ import java.util.Scanner;
 public class task1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Введите номер задания: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р·Р°РґР°РЅРёСЏ: ");
         String task = scan.nextLine();
-        switch (task)
-        {
-            case "1" :
+        switch (task) {
+            case "1":
                 task1(scan);
                 break;
-            case "2" :
+            case "2":
                 task2(scan);
                 break;
-            case "3" :
+            case "3":
                 task3(scan);
                 break;
             case "4":
@@ -43,72 +42,72 @@ public class task1 {
 
     public static void task1(Scanner scan)
     {
-        System.out.print("Введите число: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
         int number = scan.nextInt();
-        System.out.println("Последняя цифра числа: " + number%10);
+        System.out.println("РџРѕСЃР»РµРґРЅСЏСЏ С†РёС„СЂР° С‡РёСЃР»Р°: " + number%10);
     }
     public static void task2(Scanner scan)
     {
-        System.out.print("Введите трехзначное число: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ С‚СЂРµС…Р·РЅР°С‡РЅРѕРµ С‡РёСЃР»Рѕ: ");
         int number = scan.nextInt();
         int sum = 0;
         for (int i = 0; i < 3; i++) {
             sum += number%10;
             number /= 10;
         }
-        System.out.println("Сумма цифр числа: " + sum);
+        System.out.println("РЎСѓРјРјР° С†РёС„СЂ С‡РёСЃР»Р°: " + sum);
     }
     public static void task3(Scanner scan)
     {
-        System.out.print("Введите число: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
         int number = scan.nextInt();
         if (number >= 0) number++;
-        System.out.println("Преобразованное число: " + number);
+        System.out.println("РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРЅРѕРµ С‡РёСЃР»Рѕ: " + number);
     }
     public static void task4(Scanner scan)
     {
-        System.out.print("Введите число: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
         int number = scan.nextInt();
         if (number > 0) number++;
         else if (number < 0) number -= 2;
         else number = 10;
-        System.out.println("Преобразованное число: " + number);
+        System.out.println("РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРЅРѕРµ С‡РёСЃР»Рѕ: " + number);
     }
     public static void task5(Scanner scan)
     {
-        System.out.println("Введите 3 числа через Enter: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ 3 С‡РёСЃР»Р° С‡РµСЂРµР· Enter: ");
         int min = scan.nextInt();
         for (int i = 0; i < 2; i++) {
             int number = scan.nextInt();
             if (number < min) min = number;
         }
-        System.out.println("Наименьшее число: " + min);
+        System.out.println("РќР°РёРјРµРЅСЊС€РµРµ С‡РёСЃР»Рѕ: " + min);
     }
     public static void task6(Scanner scan)
     {
-        System.out.print("Введите число: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
         int number = scan.nextInt();
-        if ((number > 0) & (number%2 == 0)) System.out.println("Положительное четное число");
-        else if ((number > 0) & (number%2 == 1)) System.out.println("Положительное нечетное число");
-        else if ((number < 0) & (number%2 == 1)) System.out.println("Отрицательное нечетное число");
-        else if ((number < 0) & (number%2 == 0)) System.out.println("Отрицательное четное число");
-        else System.out.println("Нулевое число");
+        if ((number > 0) & (number%2 == 0)) System.out.println("РџРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РµС‚РЅРѕРµ С‡РёСЃР»Рѕ");
+        else if ((number > 0) & (number%2 == 1)) System.out.println("РџРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ РЅРµС‡РµС‚РЅРѕРµ С‡РёСЃР»Рѕ");
+        else if ((number < 0) & (number%2 == 1)) System.out.println("РћС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ РЅРµС‡РµС‚РЅРѕРµ С‡РёСЃР»Рѕ");
+        else if ((number < 0) & (number%2 == 0)) System.out.println("РћС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ С‡РµС‚РЅРѕРµ С‡РёСЃР»Рѕ");
+        else System.out.println("РќСѓР»РµРІРѕРµ С‡РёСЃР»Рѕ");
     }
     public static void task7(Scanner scan)
     {
-        System.out.print("Введите код города (905, 194, 491, 800): ");
+        System.out.print("Р’РІРµРґРёС‚Рµ РєРѕРґ РіРѕСЂРѕРґР° (905, 194, 491, 800): ");
         int number = scan.nextInt();
-        if (number == 905) System.out.println("Москва. Стоимость разговора: 41.5");
-        else if (number == 194) System.out.println("Ростов. Стоимость разговора: 19.8");
-        else if (number == 491) System.out.println("Краснодар. Стоимость разговора: 26.9");
-        else if (number == 800) System.out.println("Киров. Стоимость разговора: 50.0");
-        else System.out.println("Ошибка в номере города");
+        if (number == 905) System.out.println("РњРѕСЃРєРІР°. РЎС‚РѕРёРјРѕСЃС‚СЊ СЂР°Р·РіРѕРІРѕСЂР°: 41.5");
+        else if (number == 194) System.out.println("Р РѕСЃС‚РѕРІ. РЎС‚РѕРёРјРѕСЃС‚СЊ СЂР°Р·РіРѕРІРѕСЂР°: 19.8");
+        else if (number == 491) System.out.println("РљСЂР°СЃРЅРѕРґР°СЂ. РЎС‚РѕРёРјРѕСЃС‚СЊ СЂР°Р·РіРѕРІРѕСЂР°: 26.9");
+        else if (number == 800) System.out.println("РљРёСЂРѕРІ. РЎС‚РѕРёРјРѕСЃС‚СЊ СЂР°Р·РіРѕРІРѕСЂР°: 50.0");
+        else System.out.println("РћС€РёР±РєР° РІ РЅРѕРјРµСЂРµ РіРѕСЂРѕРґР°");
     }
     public static void task8(Scanner scan)
     {
         int[] array = new int[] {1, -10, 5, 6 ,45 ,23, 45, -34, 0, 32, 56, -1, 2, -2};
         int max = Integer.MIN_VALUE, sumOfPositive = 0, sumOfEvenNegative = 0, numberOfPositive = 0, averageOfNegative = 0, counterOfNegative = 0;
-        System.out.print("Дан массив {");
+        System.out.print("Р”Р°РЅ РјР°СЃСЃРёРІ {");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
             if (i != (array.length - 1)) System.out.print(", ");
@@ -127,16 +126,16 @@ public class task1 {
         }
         System.out.println("}");
         averageOfNegative = averageOfNegative / counterOfNegative;
-        System.out.println("Максимальное число массива: " + max);
-        System.out.println("Суума положительных чисел: " + sumOfPositive);
-        System.out.println("Сумма четных отрицательных чисел: " + sumOfEvenNegative);
-        System.out.println("Количество положительных чисел: " + numberOfPositive);
-        System.out.println("Среднее арифметическое отрицательных чисел: " + averageOfNegative);
+        System.out.println("РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ РјР°СЃСЃРёРІР°: " + max);
+        System.out.println("РЎСѓСѓРјР° РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… С‡РёСЃРµР»: " + sumOfPositive);
+        System.out.println("РЎСѓРјРјР° С‡РµС‚РЅС‹С… РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… С‡РёСЃРµР»: " + sumOfEvenNegative);
+        System.out.println("РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… С‡РёСЃРµР»: " + numberOfPositive);
+        System.out.println("РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… С‡РёСЃРµР»: " + averageOfNegative);
     }
     public static void task9(Scanner scan)
     {
         int[] array = new int[] {15, 10, 51, 6, 5, 3, 10, -34, 0, 32, 56, 12, 24, 52};
-        System.out.print("Начальный вид массива: {");
+        System.out.print("РќР°С‡Р°Р»СЊРЅС‹Р№ РІРёРґ РјР°СЃСЃРёРІР°: {");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
             if (i != (array.length) - 1) System.out.print(", ");
@@ -148,7 +147,7 @@ public class task1 {
             array[i] = array[array.length - i - 1];
             array[array.length - i - 1] = temp;
         }
-        System.out.print("Перевернутый массив: {");
+        System.out.print("РџРµСЂРµРІРµСЂРЅСѓС‚С‹Р№ РјР°СЃСЃРёРІ: {");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
             if (i != (array.length) - 1) System.out.print(", ");
@@ -158,7 +157,7 @@ public class task1 {
     public static void task10(Scanner scan)
     {
         int[] array = new int[] {15, 10, 0, -6, -5, 3, 0, -34, 0, 32, 56, 0, 24, 52};
-        System.out.print("Начальный вид массива: {");
+        System.out.print("РќР°С‡Р°Р»СЊРЅС‹Р№ РІРёРґ РјР°СЃСЃРёРІР°: {");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
             if (i != (array.length) - 1) System.out.print(", ");
@@ -171,7 +170,7 @@ public class task1 {
                 j++;
             }
         }
-        System.out.print("Измененный массив: {");
+        System.out.print("РР·РјРµРЅРµРЅРЅС‹Р№ РјР°СЃСЃРёРІ: {");
         for (int i = 0; i < newArray.length; i++) {
             System.out.print(newArray[i]);
             if (i != (newArray.length) - 1) System.out.print(", ");
